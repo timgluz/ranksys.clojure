@@ -38,8 +38,7 @@
 
 ;;probably broken
 (facts "uidx2user"
-  (fact "returns a correct user by user"
+  (fact "returns a correct user by index"
     (let [idx (UserIndex. [user1 user2])]
       (.uidx2user idx 0) => user1
       (.uidx2user idx 1) => user2)))
-

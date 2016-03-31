@@ -28,7 +28,9 @@
 (defn uv-getAllUsers [this]
   (.getIds (.umap this)))
 
-(defn uv-uidx2user [this ^Long uidx]
+(defn uv-uidx2user
+  "returns user object by id"
+  [this ^Long uidx]
   (.get (.umap this) (int uidx)))
 
 (defn uv-user2uidx [this user]

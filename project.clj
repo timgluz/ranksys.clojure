@@ -7,4 +7,6 @@
                  [org.ranksys/RankSys "0.4.2"]]
   :profiles {:test {:dependencies [[midje "1.8.3"]]
                     :plugins [[lein-midje "3.2"]]}}
-  :repositories [["jitpack.io" "https://jitpack.io"]])
+  :repositories [["jitpack.io" "https://jitpack.io"]]
+  :aot [ranksys.clojure.indexes.items
+        ranksys.clojure.indexes.users])
