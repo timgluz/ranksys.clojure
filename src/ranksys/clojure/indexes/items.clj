@@ -25,8 +25,16 @@
   [this item]
   (.containsId (.imap this) item))
 
+(defn ix-numItems [this]
+  (.size (.imap this)))
+
 (defn ix-getAllItems [this]
   (.getIds (.imap this)))
+
+(defn ix-getAllIidx [this]
+  (Arrays/stream
+    (int-array
+      (take (ix-numItems this) (range)))))
 
 (defn ix-iidx2item
   [this ^Long iidx]
@@ -36,5 +44,3 @@
   [this item]
   (.get (.imap this) item))
 
-(defn ix-numItems [this]
-  (.size (.imap this)))
